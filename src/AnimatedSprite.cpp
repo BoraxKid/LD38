@@ -28,9 +28,10 @@ void AnimatedSprite::update(const sf::Time &elapsedTime)
 	this->_currentFrameTime += elapsedTime.asSeconds();
 	if (this->_currentFrameTime >= this->_frameTime)
 	{
-		++this->_currentFrame;
-		if (this->_currentFrame == this->_frames.end())
+		if (this->_currentFrame + 1 == this->_frames.end())
 			this->_currentFrame = this->_frames.begin();
+		else
+			++this->_currentFrame;
 	}
 }
 

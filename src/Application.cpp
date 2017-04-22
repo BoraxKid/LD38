@@ -15,8 +15,8 @@ void Application::init()
 	this->_gameUpdateClock.restart();
 	this->_game.init();
 	this->_view = this->_window.getDefaultView();
-	this->_view.setSize(sf::Vector2f(1280.0f / 10.0f, 720.0f / 10.0f));
-	this->_view.setCenter(sf::Vector2f(0.0f, -(this->_view.getSize().y / 2.0f)));
+	this->_view.setSize(sf::Vector2f(1280.0f / 8.0f, 720.0f / 8.0f));
+	this->_view.setCenter(sf::Vector2f(0.0f, -(this->_view.getSize().y / 2.0f) + 14.0f));
 	this->_window.setView(this->_view);
 }
 

@@ -12,6 +12,8 @@ void Game::init()
 {
 	SpriteLoader::getInstance().load();
 	this->_terrain.generate();
+	this->_toolBar.init();
+	this->_toolBar.addAvailableEntity(SpriteLoader::getInstance().getSprite("woodenHouse4"));
 }
 
 void Game::handleEvents(std::queue<sf::Event> &events)
@@ -22,11 +24,6 @@ void Game::handleEvents(std::queue<sf::Event> &events)
 	{
 		event = events.front();
 		events.pop();
-		if (event.type == sf::Event::KeyPressed)
-		{
-			if (event.key.code == sf::Keyboard::A)
-				;
-		}
 	}
 }
 
@@ -37,4 +34,5 @@ void Game::update(const sf::Time &elapsedTime)
 void Game::display(sf::RenderWindow &window)
 {
 	window.draw(this->_terrain);
+	window.draw(this->_toolBar);
 }

@@ -21,7 +21,7 @@ void SpriteLoader::loadTextures()
 	// TODO: Check if the file is properly loaded
 	this->_textures["sheet"].loadFromFile("resources/textures/sheet.png");
 	this->_textures["ui_select"].loadFromFile("resources/textures/ui_select.png");
-	this->_textures["ui_toolbar"].loadFromFile("resources/textures/ui_select.png");
+	this->_textures["ui_toolbar"].loadFromFile("resources/textures/ui_toolbar.png");
 }
 
 void SpriteLoader::loadSprites()
@@ -44,7 +44,7 @@ void SpriteLoader::loadSprites()
 	this->_animatedSprites["ui_select"] = AnimatedSprite(0.5f);
 	this->_animatedSprites.at("ui_select").addFrame(sf::Sprite(this->_textures.at("ui_select"), sf::IntRect(0, 0, 8, 8)));
 	this->_animatedSprites.at("ui_select").addFrame(sf::Sprite(this->_textures.at("ui_select"), sf::IntRect(8, 0, 8, 8)));
-	this->_sprites["ui_toolbar_end"] = sf::Sprite(this->_textures.at("ui_toolbar"), sf::IntRect(0, 0, 10, 10));
-	this->_sprites["ui_toolbar_middle"] = sf::Sprite(this->_textures.at("ui_toolbar"), sf::IntRect(10, 0, 10, 10));
-	this->_sprites["ui_toolbar_single"] = sf::Sprite(this->_textures.at("ui_toolbar"), sf::IntRect(20, 0, 10, 10));
+	this->_sprites["ui_toolbar_end"] = sf::Sprite(this->_textures.at("ui_toolbar"), sf::IntRect(0, 0, 12, 12));
+	this->_sprites["ui_toolbar_middle"] = sf::Sprite(this->_textures.at("ui_toolbar"), sf::IntRect(12, 0, 12, 12));
+	this->_sprites["ui_toolbar_single"] = sf::Sprite(this->_textures.at("ui_toolbar"), sf::IntRect(24, 0, 12, 12));
 }

@@ -4,6 +4,8 @@
 
 #include "SpriteLoader.h"
 
+#include <iostream>
+
 class ToolBar : public sf::Drawable, public sf::Transformable
 {
 public:
@@ -17,7 +19,6 @@ private:
 	void updateToolbar();
 	virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 
-	sf::View _view;
 	AnimatedSprite _selectSprite;
 	sf::RenderTexture _toolBarTexture;
 	sf::Sprite _toolBarSprite;

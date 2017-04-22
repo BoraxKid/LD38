@@ -4,6 +4,7 @@
 
 #include "SpriteLoader.h"
 #include "Terrain.h"
+#include "ToolBar.h"
 
 #include <queue>
 
@@ -19,6 +20,7 @@ public:
 	void display(sf::RenderWindow &window);
 
 private:
+	ToolBar _toolBar;
 	Terrain _terrain;
 };
 
