@@ -19,6 +19,7 @@ private:
 	virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 
 	std::vector<Entity *> _terrainEntities;
+	sf::Sprite _water;
 };
 
 #endif // TERRAIN_H_

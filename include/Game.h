@@ -14,7 +14,7 @@ public:
 	virtual ~Game();
 
 	void init();
-	void handleEvents(const std::queue<sf::Event> &events);
+	void handleEvents(std::queue<sf::Event> &events);
 	void update(const sf::Time &elapsedTime);
 	void display(sf::RenderWindow &window);
 
