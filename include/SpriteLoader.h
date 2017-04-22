@@ -12,6 +12,7 @@ public:
 
 	void load();
 	const sf::Sprite &getSprite(const std::string &key) const;
+	const AnimatedSprite &getAnimatedSprite(const std::string &key) const;
 
 	static SpriteLoader &getInstance()
 	{
@@ -27,6 +28,7 @@ private:
 
 	std::map<std::string, sf::Texture> _textures;
 	std::map<std::string, sf::Sprite> _sprites;
+	std::map<std::string, AnimatedSprite> _animatedSprites;
 };
 
 #endif // SPRITELOADER_H_

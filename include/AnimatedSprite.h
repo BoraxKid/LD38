@@ -4,7 +4,7 @@
 
 #include <SFML/Graphics.hpp>
 
-class AnimatedSprite : public sf::Transformable, public sf::Drawable
+class AnimatedSprite : public sf::Drawable, public sf::Transformable
 {
 public:
 	AnimatedSprite();
@@ -13,10 +13,12 @@ public:
 
 	void addFrame(const sf::Sprite &sprite);
 	void update(const sf::Time &elapsedTime);
+	void setActive(bool active);
 
 private:
 	virtual void draw(sf::RenderTarget &target, sf::RenderStates states) const;
 
+	bool _active;
 	float _frameTime;
 	float _currentFrameTime;
 	std::vector<sf::Sprite> _frames;
